@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import TodoList from './TodoList';
 import { v4 as uuidv4 } from 'uuid';
+import './App.css';
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
@@ -37,6 +38,9 @@ function App() {
     const newTodos = todos.filter(todo => !todo.complete)
     setTodos(newTodos)
   }
+
+  
+
   return (
     <>
       <TodoList todos = {todos} toggleTodo={ toggleTodo } />
